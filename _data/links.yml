@@ -4,8 +4,7 @@
     - name: 小工具列表
       style: basic
       url: https://jiangmuran.com/tools/
-
-
+      
     - name: 小游戏列表
       style: basic
       url: https://jiangmuran.com/games/
@@ -21,14 +20,6 @@
     - name: 匿名聊天室
       style: blue
       url: https://hc.jiangmuran.com/
-
-    # - name: 北邮IPTV
-    #   style: basic
-    #   url: http://tv.byr.cn/
-
-    # - name: 信息门户
-    #   style: basic
-    #   url: http://my.bupt.edu.cn/
 
     - name: JCOIN
       style: basic
@@ -116,13 +107,6 @@
       style: basic
       url: https://www.tianyancha.com/
 
-    # - name: 稿定设计
-    #   style: basic
-    #   url: https://www.gaoding.com/
-
-    # - name: MacWk
-    #   style: basic
-    #   url: https://macwk.com/
 
   - name: 社交
     links:
@@ -302,9 +286,6 @@
       style: orange
       url: https://agmov.com/
 
-    # - name: 猪猪
-    #   style: purple
-    #   url: http://www.zzrbl.com/
 
     - name: TNH
       style: basic
@@ -323,7 +304,7 @@
       url: https://douyu.com/
 
 - categories:
-- name: 购物
+  - name: 购物
     links:
     - name: 淘宝
       style: orange
