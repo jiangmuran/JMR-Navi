@@ -18,10 +18,10 @@ organization: JMR
 organization_url: https://jiangmuran.com
 contact: jmr[at]jiangmuran[dot]com
 
-image: /images/logo.png
-logo: /images/logo.png
-logo_dark: /images/logo-dark.svg
-logo_white: /images/logo-white.svg
+image: https://jiangmuran.com/img/my-picture.png
+logo: https://jiangmuran.com/img/my-picture.png
+logo_dark: https://jiangmuran.com/img/my-picture.png
+logo_white: https://jiangmuran.com/img/my-picture.png
 
 update_interval: 60000
 
