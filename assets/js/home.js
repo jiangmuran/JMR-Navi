@@ -1,6 +1,3 @@
----
----
-
 // home.js
 
 // GitHub
@@ -12,7 +9,7 @@
     };
     setTimeout(function () {
         updateGitHubBadges();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
 
 // build time
@@ -24,42 +21,36 @@ dayjs.extend(window.dayjs_plugin_relativeTime);
     };
     setTimeout(function () {
         updateBuildTimeBadge();
-    }, {{ site.update_interval }});
-})();
-
-{%- if site.data.analytics.matomo.site_id -%}
-// visit
+    }, 60000);
+})();// visit
 (function updateVisitorBadges() {
     if (!document.hidden) {
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getUniqueVisitors',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             $('#today-visitors img').attr('src', `https://img.shields.io/badge/%E4%BB%8A%E6%97%A5%E8%AE%BF%E5%AE%A2-${encodeURIComponent(data.value)}-brightgreen?logo=matomo`);
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'Live.getCounters',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'lastMinutes': '30',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             $('#live-visitors img').attr('src', `https://img.shields.io/badge/%E5%BD%93%E5%89%8D%E5%9C%A8%E7%BA%BF-${encodeURIComponent(data[0].visitors)}-brightgreen?logo=matomo`);
         });
     };
     setTimeout(function () {
         updateVisitorBadges();
-    }, {{ site.update_interval }});
-})();
-{%- endif -%}
-
-// search
+    }, 60000);
+})();// search
 $('#search-services').dropdown();
 
 function updateDropdown() {

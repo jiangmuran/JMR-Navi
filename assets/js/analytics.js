@@ -1,6 +1,3 @@
----
----
-
 // analytics.js
 
 // date range
@@ -18,10 +15,7 @@ $('#established-at').countdown(establishedAt, {
     if (event.elapsed) {
         $(this).html(event.strftime('<div class="ui label"><i class="rocket icon"></i>已上线</div><div class="ui label">%D<div class="detail">天</div></div><div class="ui label">%-H<div class="detail">小时</div></div><div class="ui label">%-M<div class="detail">分</div></div><div class="ui label">%-S<div class="detail">秒</div></div>'));
     };
-});
-
-{%- if site.data.analytics.matomo.site_id -%}
-// visit
+});// visit
 var countUpOptions = {
     useEasing: true,
     useGrouping: true,
@@ -38,99 +32,99 @@ var liveVisitorsCountUp = new CountUp('live-visitors-stat', 0, 0, 0, 2.5, countU
 var todayVisitorsCountUp = new CountUp('today-visitors-stat', 0, 0, 0, 2.5, countUpOptions);
 var todayVisitsCountUp = new CountUp('today-visits-stat', 0, 0, 0, 2.5, countUpOptions);
 var todayActionsCountUp = new CountUp('today-actions-stat', 0, 0, 0, 2.5, countUpOptions);
-$.getJSON('{{ site.data.analytics.matomo.url }}', {
+$.getJSON('https://vps.irockbunny.com/analytics/', {
     'module': 'API',
     'method': 'VisitsSummary.getUniqueVisitors',
-    'idSite': '{{ site.data.analytics.matomo.site_id }}',
+    'idSite': '1',
     'period': 'day',
     'date': 'yesterday',
     'format': 'JSON',
-    'token_auth': '{{ site.data.analytics.matomo.token }}'
+    'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
 }, function (data) {
     yesterdayVisitorsCountUp.update(data.value);
 });
-$.getJSON('{{ site.data.analytics.matomo.url }}', {
+$.getJSON('https://vps.irockbunny.com/analytics/', {
     'module': 'API',
     'method': 'VisitsSummary.getVisits',
-    'idSite': '{{ site.data.analytics.matomo.site_id }}',
+    'idSite': '1',
     'period': 'day',
     'date': 'yesterday',
     'format': 'JSON',
-    'token_auth': '{{ site.data.analytics.matomo.token }}'
+    'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
 }, function (data) {
     yesterdayVisitsCountUp.update(data.value);
 });
-$.getJSON('{{ site.data.analytics.matomo.url }}', {
+$.getJSON('https://vps.irockbunny.com/analytics/', {
     'module': 'API',
     'method': 'VisitsSummary.getActions',
-    'idSite': '{{ site.data.analytics.matomo.site_id }}',
+    'idSite': '1',
     'period': 'day',
     'date': 'yesterday',
     'format': 'JSON',
-    'token_auth': '{{ site.data.analytics.matomo.token }}'
+    'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
 }, function (data) {
     yesterdayActionsCountUp.update(data.value);
 });
 (function updateVisit() {
     if (!document.hidden) {
-        // $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        // $.getJSON('https://vps.irockbunny.com/analytics/', {
         //     'module': 'API',
         //     'method': 'VisitsSummary.getActions',
-        //     'idSite': '{{ site.data.analytics.matomo.site_id }}',
+        //     'idSite': '1',
         //     'period': 'range',
         //     'date': `last${siteEstablishedDays()}`,
         //     'format': 'JSON',
-        //     'token_auth': '{{ site.data.analytics.matomo.token }}'
+        //     'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         // }, function (data) {
         //     totalActionsCountUp.update(data.value);
         // });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'Live.getCounters',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'lastMinutes': '30',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             liveVisitorsCountUp.update(data[0].visitors);
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getUniqueVisitors',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             todayVisitorsCountUp.update(data.value);
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getVisits',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             todayVisitsCountUp.update(data.value);
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getActions',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             todayActionsCountUp.update(data.value);
         });
     };
     setTimeout(function () {
         updateVisit();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
 
 // chart
@@ -232,14 +226,14 @@ visitSummaryChart.setOption({
 });
 (function updateVisitSummaryChart() {
     if (!document.hidden) {
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getUniqueVisitors',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'last90',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             var days = [];
             var visitors = [];
@@ -257,14 +251,14 @@ visitSummaryChart.setOption({
                 }]
             });
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getVisits',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'last90',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             var visits = [];
             for (var i in data) {
@@ -277,14 +271,14 @@ visitSummaryChart.setOption({
                 }]
             });
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getActions',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'last90',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             var actions = [];
             for (var i in data) {
@@ -300,7 +294,7 @@ visitSummaryChart.setOption({
     };
     setTimeout(function () {
         updateVisitSummaryChart();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
 
 var visitHourlyChart = echarts.init(document.getElementById('visit-hourly'), 'light');
@@ -422,14 +416,14 @@ function normalizeSymbolSize(val, data, resize) {
 };
 (function updateVisitHourlyChart() {
     if (!document.hidden) {
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitTime.getVisitInformationPerServerTime',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'last7',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             var days = [];
             var visitors = [];
@@ -503,7 +497,7 @@ function normalizeSymbolSize(val, data, resize) {
     };
     setTimeout(function () {
         updateVisitHourlyChart();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
 
 var visitMapChart = echarts.init(document.getElementById('visit-map'), 'light');
@@ -603,14 +597,14 @@ visitMapChart.setOption({
 });
 (function updateVisitMapChart() {
     if (!document.hidden) {
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'UserCountry.getCountry',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'month',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             var visitors = [];
             var visits = [];
@@ -680,7 +674,7 @@ visitMapChart.setOption({
     };
     setTimeout(function () {
         updateVisitMapChart();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
 
 var visitCalendarChart = echarts.init(document.getElementById('visit-calendar'), 'light');
@@ -803,15 +797,15 @@ visitCalendarChart.setOption({
 });
 (function updateVisitCalendarChart() {
     if (!document.hidden) {
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getActions',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             // 'date': `last${siteEstablishedDays()}`,
             'date': 'last1825',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             var cursorYear = firstYear;
             var series = [{
@@ -843,6 +837,5 @@ visitCalendarChart.setOption({
     };
     setTimeout(function () {
         updateVisitCalendarChart();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
-{%- endif -%}

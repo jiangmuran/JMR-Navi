@@ -1,6 +1,3 @@
----
----
-
 // common.js
 
 // menu
@@ -20,59 +17,55 @@ $(document).ready(function () {
 });
 
 // masthead background
-$('.ui.inverted.masthead.segment').addClass(`bg${Math.ceil(Math.random() * 14)}`).removeClass('zoomed');
-
-{%- if site.data.analytics.matomo.site_id -%}
-// analytics
-$.getJSON('{{ site.data.analytics.matomo.url }}', {
+$('.ui.inverted.masthead.segment').addClass(`bg${Math.ceil(Math.random() * 14)}`).removeClass('zoomed');// analytics
+$.getJSON('https://vps.irockbunny.com/analytics/', {
     'module': 'API',
     'method': 'VisitsSummary.getVisits',
-    'idSite': '{{ site.data.analytics.matomo.site_id }}',
+    'idSite': '1',
     'period': 'day',
     'date': 'yesterday',
     'format': 'JSON',
-    'token_auth': '{{ site.data.analytics.matomo.token }}'
+    'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
 }, function (data) {
     $('#yesterday-visits').text(data.value);
 });
-$.getJSON('{{ site.data.analytics.matomo.url }}', {
+$.getJSON('https://vps.irockbunny.com/analytics/', {
     'module': 'API',
     'method': 'VisitsSummary.getActions',
-    'idSite': '{{ site.data.analytics.matomo.site_id }}',
+    'idSite': '1',
     'period': 'day',
     'date': 'yesterday',
     'format': 'JSON',
-    'token_auth': '{{ site.data.analytics.matomo.token }}'
+    'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
 }, function (data) {
     $('#yesterday-actions').text(data.value);
 });
 (function updateAnalytics() {
     if (!document.hidden) {
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getVisits',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             $('#today-visits').text(data.value);
         });
-        $.getJSON('{{ site.data.analytics.matomo.url }}', {
+        $.getJSON('https://vps.irockbunny.com/analytics/', {
             'module': 'API',
             'method': 'VisitsSummary.getActions',
-            'idSite': '{{ site.data.analytics.matomo.site_id }}',
+            'idSite': '1',
             'period': 'day',
             'date': 'today',
             'format': 'JSON',
-            'token_auth': '{{ site.data.analytics.matomo.token }}'
+            'token_auth': 'b20d2b5002a1241da41853f33eccccdd'
         }, function (data) {
             $('#today-actions').text(data.value);
         });
     };
     setTimeout(function () {
         updateAnalytics();
-    }, {{ site.update_interval }});
+    }, 60000);
 })();
-{%- endif -%}
