@@ -25,4 +25,9 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: ${{ github.ref }}
+        name: Release ${{ github.ref }}
+        body: New Release.
+        draft: false
+        prerelease: false
         files: rel.zip
