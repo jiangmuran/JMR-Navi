@@ -21,6 +21,7 @@ jobs:
         bundle install
         echo done1
         bundle exec jekyll build
+        ls ./_site
         zip rel.zip ./_site
     - name: Release
       uses: softprops/action-gh-release@v2
