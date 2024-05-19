@@ -24,6 +24,5 @@ jobs:
         zip rel.zip ./_site
     - name: Release
       uses: softprops/action-gh-release@v2
-      if: startsWith(github.ref, 'refs/tags/')
       with:
         files: rel.zip
