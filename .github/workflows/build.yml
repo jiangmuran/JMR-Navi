@@ -20,4 +20,4 @@ jobs:
         gem install jekyll bundler
         bundle install
         echo done1
-        bundle exec jekyll serve
+        bundle exec jekyll build
