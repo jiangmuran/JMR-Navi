@@ -11,7 +11,7 @@ message:
 advertisement:
   show: true
   content: chatgpt在线使用
-  detail: chatgpt在线使用
+  detail: 3.5/4.0点开即用
   color: black
   icon: university
   link: https://p.jiangmuran.com/
