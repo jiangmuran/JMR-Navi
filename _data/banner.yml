@@ -9,9 +9,9 @@ message:
   link: https://mp.weixin.qq.com/s/v8Pe6SN1xtQTCBh8bVkwIQ
 
 advertisement:
-  show: false
-  content: 学术精进 系统构建20K词汇体系
-  detail: 云英语VB词汇建造师
+  show: true
+  content: chatgpt在线使用
+  detail: chatgpt在线使用
   color: black
   icon: university
-  link: https://y-english.cn/
+  link: https://p.jiangmuran.com/
