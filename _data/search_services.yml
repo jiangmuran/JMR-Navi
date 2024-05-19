@@ -68,7 +68,7 @@
   shortcut:
     icon: github
     style: black
-    show: false
+    show: true
 
 - id: stackoverflow
   name: Stack Overflow
@@ -206,13 +206,6 @@
     style: black
     show: true
 
-- id: yhd
-  name: 1号店
-  url: https://search.yhd.com/c0-0/k{query}/
-  shortcut:
-    icon: store red inverted
-    style: black
-    show: false
 
 - id: amazon
   name: 亚马逊
@@ -220,7 +213,7 @@
   shortcut:
     icon: amazon yellow inverted
     style: black
-    show: false
+    show: true
 
 - id: dangdang
   name: 当当
@@ -236,7 +229,7 @@
   shortcut:
     icon: music red inverted
     style: black
-    show: false
+    show: true
 
 - id: bilibili
   name: 哔哩哔哩
@@ -252,7 +245,7 @@
   shortcut:
     icon: youtube red inverted
     style: black
-    show: true
+    show: false
 
 - id: zimuku
   name: 字幕库
@@ -337,16 +330,7 @@
     style: black
     show: true
 
-- id: 1337x
-  name: 1337X
-  url: https://1337x.to/search/{query}/1/
-  transcode:
-    from: '%20'
-    to: '+'
-  shortcut:
-    icon: times red inverted
-    style: black
-    show: true
+
 
 - id: rarbg
   name: RARBG
@@ -369,29 +353,5 @@
   url: https://onejav.com/search/{query}
   shortcut:
     icon: film pink inverted
-    style: black
-    show: false
-
-- id: byrsearch
-  name: 北邮人论坛1
-  url: http://123.207.168.11/byrbbs/?key={query}
-  shortcut:
-    icon: comments red inverted
-    style: black
-    show: false
-
-- id: icysearch
-  name: 北邮人论坛2
-  url: http://search.icybee.cn/bbs/?key={query}
-  shortcut:
-    icon: comments blue inverted
-    style: black
-    show: false
-
-- id: byrbt
-  name: 北邮人BT
-  url: https://byr.pt/torrents.php?search={query}
-  shortcut:
-    icon: cloud download alternate teal inverted
     style: black
     show: false
