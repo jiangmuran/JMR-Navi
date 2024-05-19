@@ -1,64 +1,60 @@
 - categories:
-  - name: 购物
+  - name: 洁面乳工具
     links:
-    - name: 淘宝
-      style: orange
-      url: https://www.taobao.com/
-
-    - name: 天猫
-      style: red
-      url: https://www.tmall.com/
-
-    - name: 京东
+    - name: 小工具列表
       style: basic
-      url: https://www.jd.com/
+      url: https://jiangmuran.com/tools/
 
-    - name: Amazon
-      icon: amazon yellow
+
+    - name: 小游戏列表
       style: basic
-      url: https://www.amazon.cn/
+      url: https://jiangmuran.com/games/
 
-    - name: Apple
-      style: basic
-      icon: apple grey
-      url: https://www.apple.com/
-
-    - name: 当当
-      style: pink
-      url: http://www.dangdang.com/
-
-    - name: 严选
-      style: basic
-      url: http://you.163.com/
-
-    - name: UNIQLO
-      style: red
-      url: http://www.uniqlo.cn/
-
-    - name: MUJI
-      style: basic
-      url: http://www.muji.com.cn/
-
-    - name: IKEA
-      style: yellow
-      url: https://www.ikea.cn/
-
-    - name: Decathlon
+    - name: AI
       style: blue
-      url: https://www.decathlon.com.cn/
+      url: https://p.jiangmuran.com/
 
-    - name: 大疆
-      style: black
-      url: https://www.dji.com/
+    - name: 云盘
+      style: basic
+      url: https://cloud.jiangmuran.com/
 
-    - name: 小米
-      style: orange
-      url: https://www.mi.com/
+    - name: 匿名聊天室
+      style: blue
+      url: https://hc.jiangmuran.com/
 
-    - name: 有品
-      style: brown
-      url: https://xiaomiyoupin.com/
+    # - name: 北邮IPTV
+    #   style: basic
+    #   url: http://tv.byr.cn/
 
+    # - name: 信息门户
+    #   style: basic
+    #   url: http://my.bupt.edu.cn/
+
+    - name: JCOIN
+      style: basic
+      url: https://jcoin.jiangmuran.com/
+
+    - name: 微信登陆
+      style: basic
+      url: http://jiangmuran.com
+
+    - name: 信息推送
+      style: basic
+      url: http://jiangmuran.com
+
+    - name: 邮箱
+      style: basic
+      url: https://mail.jiangmuran.com/
+      
+    - name: AI前端
+      style: basic
+      url: https://chat.jiangmuran.com/
+      
+    - name: 邮箱
+      style: basic
+      url: https://mail.jiangmuran.com/
+
+  
   - name: 工具
     links:
     - name: '12306'
@@ -327,63 +323,65 @@
       url: https://douyu.com/
 
 - categories:
-  - name: 北邮校园
+- name: 购物
     links:
-    - name: 北邮官网
+    - name: 淘宝
+      style: orange
+      url: https://www.taobao.com/
+
+    - name: 天猫
+      style: red
+      url: https://www.tmall.com/
+
+    - name: 京东
       style: basic
-      url: https://www.bupt.edu.cn/
+      url: https://www.jd.com/
 
-    # - name: 本科教务系统
-    #   style: basic
-    #   url: https://jwgl.bupt.edu.cn/jsxsd/
-
-    - name: 研究生教务系统
+    - name: Amazon
+      icon: amazon yellow
       style: basic
-      url: http://yjxt.bupt.edu.cn/
+      url: https://www.amazon.cn/
 
-    - name: 教务处
+    - name: Apple
       style: basic
-      url: http://jwc.bupt.edu.cn/
+      icon: apple grey
+      url: https://www.apple.com/
 
-    - name: 北邮人论坛
+    - name: 当当
+      style: pink
+      url: http://www.dangdang.com/
+
+    - name: 严选
       style: basic
-      url: https://bbs.byr.cn/
+      url: http://you.163.com/
 
-    - name: 北邮人BT
+    - name: UNIQLO
+      style: red
+      url: http://www.uniqlo.cn/
+
+    - name: MUJI
+      style: basic
+      url: http://www.muji.com.cn/
+
+    - name: IKEA
+      style: yellow
+      url: https://www.ikea.cn/
+
+    - name: Decathlon
       style: blue
-      url: https://byr.pt/promotionlink.php?key=63030ce02da245eb152d2e8dc8dd6add
+      url: https://www.decathlon.com.cn/
 
-    # - name: 北邮IPTV
-    #   style: basic
-    #   url: http://tv.byr.cn/
+    - name: 大疆
+      style: black
+      url: https://www.dji.com/
 
-    # - name: 信息门户
-    #   style: basic
-    #   url: http://my.bupt.edu.cn/
+    - name: 小米
+      style: orange
+      url: https://www.mi.com/
 
-    - name: 图书馆
-      style: basic
-      url: http://lib.bupt.edu.cn/
-
-    - name: 北邮贴吧
-      style: basic
-      url: http://tieba.baidu.com/f?kw=%B1%B1%BE%A9%D3%CA%B5%E7%B4%F3%D1%A7
-
-    - name: 校园网
-      style: basic
-      url: http://nic.bupt.edu.cn/
-
-    - name: 北邮邮箱
-      style: basic
-      url: http://mail.bupt.edu.cn/
-
-    # - name: VPN服务
-    #   style: basic
-    #   url: https://nic.bupt.edu.cn/list/list.php?p=5_13_1
-
-    # - name: 空闲自习室查询
-    #   style: basic
-    #   url: http://buptclass.com/
+    - name: 有品
+      style: brown
+      url: https://xiaomiyoupin.com/
 
   - name: 校园助手
     links:
