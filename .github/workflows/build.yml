@@ -29,14 +29,14 @@ jobs:
         tag_name: v1.0.0
         name: Release 1.0.0
         body: New Release.
+        draft: false
+        prerelease: false
+        files: rel.zip
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        REPOSITORY_NAME: somenzz/somenzz.github.io
-        BRANCH: master
-        FOLDER: public
-          
-        draft: false
-        prerelease: false
-        files: rel.zip
+        REPOSITORY_NAME: JMR-Navi/jiangmuran.github.io
+        BRANCH: pages
+        FOLDER: _site
+        
